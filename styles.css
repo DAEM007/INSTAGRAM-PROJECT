@@ -30,6 +30,79 @@ nav {
     width: 21em;
     margin-left: 16em;
     border-radius: 8px;
-    border: none;
+    border: unset;
 }
 
+/* Note: Below is how you style the placeholder found in the html */
+.search::placeholder {
+    /* text-align: left; */
+    color: #8e8e8e;
+    text-transform: capitalize;
+}
+
+.nav-links {
+    margin-left: 3.0em;
+}
+
+.nav-links a {
+    margin-left: 1.1em;
+}
+
+.nav-links i {
+    /* background-color: #ffffff; This is not needed...background-color already inherited from body*/ 
+    color: #262626;
+    vertical-align: middle;
+}
+
+/* BIO AND GALLERY SECTION STYLES */
+.container {
+    padding: 0 15%;
+}
+
+/* BIO */
+.container .bio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 613.33px 185px;
+    grid-template-areas: 
+                "profile-photo profile-info"
+    ;
+    height: 13em;
+    padding: 3em 0 0 5em;
+    border-bottom: 0.5px solid #dbdbdb;
+}
+
+.container .profile-photo {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+}
+
+.container .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container .profile-info .username {
+    font-size: 2em;
+    color: #262626;
+}
+
+.container .profile-info button {
+    background-color: #0095f6;
+    color: #ffffff;
+    font-size: 1em;
+    height: 2em;
+    width: 7em;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: unset;
+    cursor: pointer;
+}
+
+/* GALLERY */
+.container .gallery-nav {
+    background-color: blue;
+}

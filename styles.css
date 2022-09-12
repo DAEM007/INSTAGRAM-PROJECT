@@ -1,0 +1,35 @@
+
+/* BODY STYLES */
+body {
+    background-color: #fafafa;
+    margin: 0;
+}
+
+/* NAV STYLES */
+nav {
+    background-color: #ffffff;
+    height: 3.7em;
+    line-height: 3.3em;
+    padding: 0 13.5em;
+    border-bottom: 0.1px solid #dbdbdb;
+}
+
+.logo{
+    text-decoration: none;
+}
+
+.logo > img {
+    width: 103px;
+    height: 29px;
+    vertical-align: middle;
+}
+
+.search {
+    background-color: #efefef;
+    height: 3.0em;
+    width: 21em;
+    margin-left: 16em;
+    border-radius: 8px;
+    border: none;
+}
+

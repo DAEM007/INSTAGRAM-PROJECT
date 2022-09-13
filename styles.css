@@ -49,6 +49,10 @@ nav {
     margin-left: 1.1em;
 }
 
+.nav-links label {
+    margin-left: 1.1em;
+}
+
 .nav-links i {
     /* background-color: #ffffff; This is not needed...background-color already inherited from body*/ 
     color: #262626;
@@ -104,6 +108,10 @@ nav {
 }
 
 /* GALLERY */
+#add-photo-input {
+    display: none;
+}
+
 .container .gallery-nav {
     height: 3em;
 }

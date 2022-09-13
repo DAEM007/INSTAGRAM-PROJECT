@@ -1,5 +1,6 @@
 
 const Gallery = () => `
+    <input type="file" name="photo" id="add-photo-input">
     <div class="gallery-nav"></div>
     <section class="gallery">
         <a href="#" class="item">

@@ -10,8 +10,10 @@ const Nav = () => `
         <span class="nav-links">
             <a href="#"><i class="fa-solid fa-house fa-xl"></i></a>
             <a href="#"><i class="fa-regular fa-message fa-xl"></i></a>
-            <a href="#"><i class="fa-regular fa-square-plus fa-xl"></i></a>
-            <a href="#"> <i class="fa-regular fa-compass fa-xl"></i></a>
+            <label for="add-photo-input">
+                <i class="fa-regular fa-square-plus fa-xl"></i>
+            </label>
+            <a href="#"><i class="fa-regular fa-compass fa-xl"></i></a>
             <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
         </span>
     </nav>

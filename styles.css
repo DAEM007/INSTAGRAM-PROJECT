@@ -51,6 +51,7 @@ nav {
 
 .nav-links label {
     margin-left: 1.1em;
+    cursor: pointer;
 }
 
 .nav-links i {
@@ -68,12 +69,12 @@ nav {
 .container .bio {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 613.33px 185px;
+    /* Grid template rows should not be here in this context because it would mess with the form */
     grid-template-areas: 
                 "profile-photo profile-info"
     ;
-    height: 13em;
     padding: 3em 0 0 5em;
+    height: 13em;
     border-bottom: 0.5px solid #dbdbdb;
 }
 
@@ -113,7 +114,7 @@ nav {
 }
 
 .container .gallery-nav {
-    height: 3em;
+    height: 3.5em;
 }
 
 .container .gallery{

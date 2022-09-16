@@ -9,6 +9,7 @@ const Bio = () => {
             </div>
             <div class="profile-info">
                 <p class="name">diana gal gadot</p>
+                <p class="about">Hey there, I am Diana Gal Gadot and I am from the Amazonian race.</p>
                 <button>edit bio</button>
             </div>
             <form class="edit-bio-form">

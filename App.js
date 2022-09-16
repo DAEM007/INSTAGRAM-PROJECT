@@ -7,15 +7,33 @@ const App = () => {
     return `
         ${Nav()}
         <div class="container">
-        ${Bio()}
-        ${Gallery()}
+            ${Bio()}
+            ${Gallery()}
         </div>
     `
 }
 
 
-// using query selector to query the dom
-// const root = document.querySelector('#root');
-// root.innerHTML = App();
+// REFERENCES TO THE DOM
 
-document.getElementById('root').innerHTML = App();
+// Reference to the root Div
+const rootDiv = document.querySelector('#root');
+// Rendering the root Div to the Dom. This is very important before any other manipulation is done.
+// Call the App function and place it in the Div with id of "root"
+rootDiv.innerHTML = App();
+
+// Reference to the form in the Bio function/session
+const editBioForm = document.querySelector('.edit-bio-form');
+
+//OTHER DOM MANIPULATION AND RENDERING
+
+// Event listener to form for changes in the Bio name
+editBioForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nameInput = document.querySelector('#name').value;
+    const nameOutput = document.querySelector('.name');
+    nameOutput.innerText = nameInput;
+})
+
+
+

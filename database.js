@@ -29,6 +29,14 @@ const addEntryToDb = (storeName, entry) => {
     const transaction = database.transaction([storeName], 'readwrite');
     const store = transaction.objectStore(storeName);
     store.add(entry);
+    // use transaction properties..."complete" and "error" to check for a success or error when updating(adding or removing) entries.
+    transaction.oncomplete = () => {
+        alert(`Entry added to the ${storeName}`);
+    }
+    transaction.onerror = (event) => {
+        console.log(`Error adding entry to the ${storeName}`);
+        console.log(event.target.onerror);
+    }
 
 }
 

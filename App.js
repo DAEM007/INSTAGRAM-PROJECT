@@ -1,7 +1,7 @@
 import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
 import Gallery from "./modules/Gallery/gallery.js";
-import { request } from "./database.js";
+import { request, addEntryToDb } from "./database.js";
 
 
 const App = () => {
@@ -19,9 +19,14 @@ const App = () => {
 
 // Reference to the root Div
 const rootDiv = document.querySelector('#root');
-// Rendering the root Div to the Dom. This is very important before any other manipulation is done.
-// Call the App function and place it in the Div with id of "root"
+// Rendering the root Div to the Dom. This is very important before any other manipulation is done. We do this by Calling the App function and place it in the Div with id of "root"
+// 
 rootDiv.innerHTML = App();
+
+// using the IDB in the application now
+request.onsuccess = () => {
+    addEntryToDb('bio', {name: 'Emmanuel Damilola', description: `I am a believer who is a self-taught programmer.`});
+}
 
 // Reference to the form in the Bio function/session
 const editBioForm = document.querySelector('.edit-bio-form');

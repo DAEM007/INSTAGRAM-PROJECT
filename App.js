@@ -1,6 +1,7 @@
 import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
 import Gallery from "./modules/Gallery/gallery.js";
+import { request } from "./database.js";
 
 
 const App = () => {
@@ -34,6 +35,5 @@ editBioForm.addEventListener('submit', (e) => {
     const nameOutput = document.querySelector('.name');
     nameOutput.innerText = nameInput;
 })
-
 
 

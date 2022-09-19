@@ -1,9 +1,9 @@
 import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
 import Gallery from "./modules/Gallery/gallery.js";
-import { request, addEntryToDb } from "./database.js";
+import { request, addEntryToDb, getEntryFromDb } from "./database.js";
 
-
+// We create a function to later render to the dom
 const App = () => {
     return `
         ${Nav()}
@@ -26,6 +26,7 @@ rootDiv.innerHTML = App();
 // using the IDB in the application now
 request.onsuccess = () => {
     addEntryToDb('bio', {name: 'Emmanuel Damilola', description: `I am a believer who is a self-taught programmer.`});
+    getEntryFromDb('bio', 100);
 }
 
 // Reference to the form in the Bio function/session

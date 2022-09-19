@@ -1,5 +1,6 @@
 
 // SETTING UP THE DATABASE
+
 // Request to open the database
 const request = indexedDB.open('Instagram', 5);
 
@@ -25,7 +26,7 @@ request.onerror = () => {
 
 const addEntryToDb = (storeName, entry) => {
     const database = request.result;
-    // Request to add to the database
+    // Request to add data to the database
     const transaction = database.transaction([storeName], 'readwrite');
     const store = transaction.objectStore(storeName);
     store.add(entry);
@@ -37,7 +38,22 @@ const addEntryToDb = (storeName, entry) => {
         console.log(`Error adding entry to the ${storeName}`);
         console.log(event.target.onerror);
     }
-
 }
 
-export { request, addEntryToDb };
+const getEntryFromDb = (storeName, id) => {
+    const database = request.result;
+    // Request to get data from the database
+    const transaction = database.transaction([storeName]);
+    const store = transaction.objectStore(storeName);
+    const getData = id ? store.get(id) : store.getAll();
+    // use the transaction properties..."complete" amd "error" to check for a success or error when updating entries/ quering the entries
+    getData.onsuccess = () => {
+        console.log(`success in accesing store from database!!!`, getData.result);
+    }
+    getData.onerror = () => {
+        console.log(`Error in accessing store from database!!!`);
+    }
+}
+
+export { request, addEntryToDb, getEntryFromDb };
+

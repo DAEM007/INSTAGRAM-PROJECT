@@ -1,5 +1,6 @@
 import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
+import addBioEventListeners from "./modules/Bio/events.js";
 import Gallery from "./modules/Gallery/gallery.js";
 import { request, addEntryToDb, getEntryFromDb } from "./database.js";
 
@@ -25,21 +26,8 @@ rootDiv.innerHTML = App();
 
 // using the IDB in the application now
 request.onsuccess = () => {
-    addEntryToDb('bio', {name: 'Emmanuel Damilola', description: `I am a believer who is a self-taught programmer.`});
-    getEntryFromDb('bio', 100);
+    addBioEventListeners();
 }
 
-// Reference to the form in the Bio function/session
-const editBioForm = document.querySelector('.edit-bio-form');
-
-//OTHER DOM MANIPULATION AND RENDERING
-
-// Event listener to form for changes in the Bio name
-editBioForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nameInput = document.querySelector('#name').value;
-    const nameOutput = document.querySelector('.name');
-    nameOutput.innerText = nameInput;
-})
 
 

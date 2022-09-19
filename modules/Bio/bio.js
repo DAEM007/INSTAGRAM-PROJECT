@@ -1,4 +1,4 @@
-
+import editBioForm from "./editBio.js";
 // Note from the above we would want the class of name in the profile-info to be dynamic and not static...to solve this we made Bio a function so  we can then call that function later.
 
 const Bio = () => {
@@ -9,13 +9,10 @@ const Bio = () => {
             </div>
             <div class="profile-info">
                 <p class="name">diana gal gadot</p>
-                <p class="about">Hey there, I am Diana Gal Gadot and I am from the Amazonian race.</p>
+                <p class="decription">Hey there, I am Diana Gal Gadot and I am from the Amazonian race.</p>
                 <button>edit bio</button>
             </div>
-            <form class="edit-bio-form">
-                <input type="text" id="name" placeholder="name">
-                <button type="submit">submit</button>
-            </form>
+            ${editBioForm()}
         </section>
     `
 }

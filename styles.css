@@ -1,3 +1,6 @@
+/* ALL IMPORTS */
+@import url(./modules/Bio/bio.css);
+
 
 /* BODY STYLES */
 body {
@@ -65,18 +68,11 @@ nav {
     padding: 0 15%;
 }
 
+
+
 /* BIO */
-.container .bio {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* Grid template rows should not be here in this context because it would mess with the form */
-    grid-template-areas: 
-                "profile-photo profile-info"
-    ;
-    padding: 3em 0 0 5em;
-    height: 13em;
-    border-bottom: 0.5px solid #dbdbdb;
-}
+
+
 
 .container .profile-photo {
     width: 10em;

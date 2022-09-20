@@ -1,0 +1,59 @@
+
+
+/* BIO STYLES */
+
+.container .bio {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Grid template rows should not be here in this context because it would mess with the form */
+    grid-template-areas: 
+                "profile-photo profile-info"
+    ;
+    padding: 3em 0 0 5em;
+    height: 13em;
+    border-bottom: 0.5px solid #dbdbdb;
+}
+
+.container .edit-bio-form {
+    /* display: none; */
+    position: absolute;
+    right: 32em;
+    top: 4.5em;
+    background-color: #fff;
+    width: 18em;
+    height: 9em;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 1px 1px 3px #333333;
+}
+
+.edit-bio-form #bioName,
+.edit-bio-form #bioDescription {
+    background-color: #dbdbdb;
+    margin-bottom: 0.5em;
+    padding: 1.5em;
+    border: unset;
+    border-radius: 5px;
+}
+
+.edit-bio-form #bioName {
+    padding: 0.5em;
+}
+
+.edit-bio-form #submit {
+    display: block;
+    margin-left: 9em;
+    margin-top: 0.5em;
+    padding: 0.8em;
+    background-color: #0095f6;
+    color: #fff;
+    text-transform: capitalize;
+    border: unset;
+    border-radius: 5px;
+}
+
+.edit-bio-form #submit:hover {
+    background-color: #dbdbdb;
+    color: #0095f6;
+}
+

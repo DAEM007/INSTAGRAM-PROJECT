@@ -26,7 +26,7 @@ request.onerror = () => {
 
 const addEntryToDb = (storeName, entry) => {
     const database = request.result;
-    // Request to add data to the database
+    // Request to modify(add data) to the database
     const transaction = database.transaction([storeName], 'readwrite');
     const store = transaction.objectStore(storeName);
     store.add(entry);
@@ -42,7 +42,7 @@ const addEntryToDb = (storeName, entry) => {
 
 const getEntryFromDb = (storeName, id) => {
     const database = request.result;
-    // Request to get data from the database
+    // Request to modify(get data from) the database
     const transaction = database.transaction([storeName]);
     const store = transaction.objectStore(storeName);
     const getData = id ? store.get(id) : store.getAll();
@@ -55,5 +55,19 @@ const getEntryFromDb = (storeName, id) => {
     }
 }
 
-export { request, addEntryToDb, getEntryFromDb };
+const clearAllEntries = (storeName) => {
+    const database = request.result;
+    const transaction = database.transaction([storeName], 'readwrite');
+    const store = transaction.objectStore(storeName);
+    const clearStore = store.clear();
+
+    clearStore.onsuccess = () => {
+        console.log(`Success in clearing the ${storeName} store!!!`);
+    }
+    clearStore.onerror = () => {
+        console.log(`Error in  clearing store from database!!!`);
+    }
+}
+
+export { request, addEntryToDb, getEntryFromDb, clearAllEntries };
 

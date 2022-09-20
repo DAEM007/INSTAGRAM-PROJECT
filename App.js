@@ -2,7 +2,7 @@ import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
 import addBioEventListeners from "./modules/Bio/events.js";
 import Gallery from "./modules/Gallery/gallery.js";
-import { request, addEntryToDb, getEntryFromDb } from "./database.js";
+import { request } from "./database.js";
 
 // We create a function to later render to the dom
 const App = () => {
@@ -28,6 +28,8 @@ rootDiv.innerHTML = App();
 request.onsuccess = () => {
     addBioEventListeners();
 }
+
+
 
 
 

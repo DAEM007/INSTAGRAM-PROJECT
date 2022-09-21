@@ -40,7 +40,9 @@ const addEntryToDb = (storeName, entry) => {
     }
 }
 
-const getEntryFromDb = (storeName, id) => {
+const getEntryFromDb = async (storeName, id) => {
+    // Wrap then data to be gotten from the database into a promise
+    const data = new Promise((resolve, reject) => {
     const database = request.result;
     // Request to modify(get data from) the database
     const transaction = database.transaction([storeName]);
@@ -48,11 +50,17 @@ const getEntryFromDb = (storeName, id) => {
     const getData = id ? store.get(id) : store.getAll();
     // use the transaction properties..."complete" amd "error" to check for a success or error when updating entries/ quering the entries
     getData.onsuccess = () => {
-        console.log(`success in accesing store from database!!!`, getData.result);
+        console.log(`success in getting entry from store of the database!!!`, getData.result);
+        resolve(getData.result)
     }
     getData.onerror = () => {
-        console.log(`Error in accessing store from database!!!`);
+        console.log(`Error in getting entry from store of the database!!!`);
+        reject(getData.error)
     }
+    })
+    
+    // return promise
+    return Promise.resolve(data);
 }
 
 const clearAllEntries = (storeName) => {

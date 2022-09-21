@@ -1,4 +1,4 @@
-import { addEntryToDb, clearAllEntries } from "../../database.js";
+import { addEntryToDb, clearAllEntries, getEntryFromDb } from "../../database.js";
 
 // Create function that would fire for the events in the bio form
 const addBioEventListeners = () => {
@@ -13,7 +13,7 @@ const addBioEventListeners = () => {
         editBioForm.style.display = 'block';
     })
 
-    // Event listener to form for changes in the Bio name
+    // Event listener to form for changes in the Bio name and description
     editBioForm.addEventListener('submit', (e) => {
         e.preventDefault();
         // Reference to the dom for the bio for the bio form element
@@ -21,15 +21,17 @@ const addBioEventListeners = () => {
         const bioDescription = document.querySelector('#bioDescription').value;
         const nameOutput = document.querySelector('.name');
         const descriptionOutput = document.querySelector('.decription');
-        // Dom manipulation
-        nameOutput.innerText = bioName;
-        descriptionOutput.innerText = bioDescription;
-
+        
         // Clear all entries from thread before adding another entry to the database
         clearAllEntries('bio');
 
-        // add entry function for the database
+        // Add entry function for the database
         addEntryToDb('bio', {bioName, bioDescription});
+
+        // Rendering for the bio name and description 
+        nameOutput.innerText = bioName;
+        descriptionOutput.innerText = bioDescription;
+
         // Hide the form after it has been filled
         editBioForm.style.display = 'none';
     })

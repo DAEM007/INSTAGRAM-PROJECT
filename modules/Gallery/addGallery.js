@@ -10,7 +10,7 @@ const gallery = document.querySelector('.gallery');
 
 
 // Render the image to the DOM
-gallery.innerHTML = `
+const galleryInnerHtml = `
 ${Gallery()}
 <a href="#" class="item">
     <img src="" alt="">

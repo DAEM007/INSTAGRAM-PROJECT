@@ -13,14 +13,13 @@ const App = async() => {
         ${Nav()}
         <div class="container">
             ${await Bio()}
-            ${Gallery()}
+            ${await Gallery()}
         </div>
     `
 }
 
 
 // REFERENCES TO THE DOM
-
 // Reference to the root Div
 const rootDiv = document.querySelector('#root');
 
@@ -32,6 +31,8 @@ request.onsuccess = async () => {
     addBioEventListeners();
     addGalleryEventListeners();
 }
+
+
 
 
 

@@ -1,4 +1,4 @@
-import { addEntryToDb, clearAllEntries, getEntryFromDb } from "../../database.js";
+import { addEntryToDb, clearAllEntries } from "../../database.js";
 
 // Create function that would fire for the events in the bio form
 const addBioEventListeners = () => {
@@ -22,7 +22,7 @@ const addBioEventListeners = () => {
         const nameOutput = document.querySelector('.name');
         const descriptionOutput = document.querySelector('.decription');
         
-        // Clear all entries from thread before adding another entry to the database
+        // Clear all entries from bio thread before adding another entry to the database
         clearAllEntries('bio');
 
         // Add entry function for the database

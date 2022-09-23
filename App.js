@@ -2,7 +2,7 @@ import Nav from "./modules/Nav/nav.js";
 import Bio from "./modules/Bio/bio.js";
 import addBioEventListeners from "./modules/Bio/events.js";
 import Gallery from "./modules/Gallery/gallery.js";
-import addGalleryEventListeners from "./modules/Gallery/events.js";
+import { addGalleryEventListeners, addImagesToGallery } from "./modules/Gallery/events.js";
 import { request } from "./database.js";
 
 // note: try removing the get entry from db and see what happens
@@ -13,7 +13,7 @@ const App = async() => {
         ${Nav()}
         <div class="container">
             ${await Bio()}
-            ${await Gallery()}
+            ${Gallery()}
         </div>
     `
 }
@@ -30,6 +30,7 @@ request.onsuccess = async () => {
     rootDiv.innerHTML = await App();
     addBioEventListeners();
     addGalleryEventListeners();
+    await addImagesToGallery();
 }
 
 

@@ -1,5 +1,7 @@
 /* ALL IMPORTS */
 @import url(./modules/Bio/bio.css);
+@import url(./modules/Gallery/gallery.css);
+@import url(./modules/Nav/nav.css);
 
 
 /* BODY STYLES */
@@ -11,57 +13,7 @@ body {
 }
 
 /* NAV STYLES */
-nav {
-    background-color: #ffffff;
-    height: 3.7em;
-    line-height: 3.3em;
-    padding: 0 13.5em;
-    border-bottom: 0.1px solid #dbdbdb;
-}
 
-.logo{
-    text-decoration: none;
-}
-
-.logo > img {
-    width: 103px;
-    height: 29px;
-    vertical-align: middle;
-}
-
-.search {
-    background-color: #efefef;
-    height: 3.0em;
-    width: 21em;
-    margin-left: 16em;
-    border-radius: 8px;
-    border: unset;
-}
-
-/* Note: Below is how you style the placeholder found in the html */
-.search::placeholder {
-    /* text-align: left; */
-    color: #8e8e8e;
-}
-
-.nav-links {
-    margin-left: 3.0em;
-}
-
-.nav-links a {
-    margin-left: 1.1em;
-}
-
-.nav-links label {
-    margin-left: 1.1em;
-    cursor: pointer;
-}
-
-.nav-links i {
-    /* background-color: #ffffff; This is not needed...background-color already inherited from body*/ 
-    color: #262626;
-    vertical-align: middle;
-}
 
 /* BIO AND GALLERY SECTION STYLES */
 .container {
@@ -69,11 +21,10 @@ nav {
 }
 
 
-
 /* BIO */
 
 
-
+/* PROFILE PHOTO STYLES */
 .container .profile-photo {
     width: 10em;
     height: 10em;
@@ -106,38 +57,3 @@ nav {
 
 
 /* GALLERY */
-#add-photo-input {
-    display: none;
-}
-
-.container .gallery-nav {
-    height: 3.5em;
-}
-
-.container .gallery{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 1.7em;
-    column-gap: 1.7em;
-    /* grid-template-rows: 293px 293px; */
-    grid-template-areas: 
-        "item-1" "item-2" "item-3"
-        "item-4" "item-5" "item-6"
-    ;
-}
-
-.container .gallery .item{
-    height: 18.5em;
-    width: 18.5em;
-    background-color: #000;
-}
-
-.container .gallery img:hover {
-    opacity: 0.7;
-}
-
-.container .gallery .item img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}

@@ -34,6 +34,3 @@ request.onsuccess = async () => {
 }
 
 
-
-
-

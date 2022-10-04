@@ -23,6 +23,7 @@
     width: 20em;
     height: 12em;
     padding: 1em;
+    border-radius: 7px;
     text-align: center;
     box-shadow: 1px 1px 3px #333333;
 }
@@ -69,3 +70,37 @@
     cursor: pointer;
 }
 
+
+
+/* RESPONSIVE BIO STYLES */
+
+/* TABLET RESPONSIVE */
+@media (min-width: 484px) and (max-width: 768px) {
+    .container .bio {
+        height: 22em;
+    }
+
+    .profile-photo {
+        padding: 5em 0 0 5em;
+    }
+
+    .profile-info {
+        margin-left: 10em;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 480px) {
+    /* Responsive Bio */
+    .container .bio {
+        height: 22em;
+    }
+
+    .profile-photo {
+        padding: 5em 0 0 5em;
+    }
+
+    .profile-info {
+        margin-left: 10rem;
+    }
+}

@@ -35,7 +35,7 @@ const addEntryToDb = (storeName, entry) => {
         alert(`Entry added to the ${storeName}`);
     }
     transaction.onerror = (event) => {
-        console.log(`Error adding entry to the ${storeName}`);
+        console.log(`Error adding entry to the ${storeName} store`);
         console.log(event.target.onerror);
     }
 }
@@ -50,12 +50,11 @@ const getEntryFromDb = async (storeName, id) => {
     const getData = id ? store.get(id) : store.getAll();
     // use the transaction properties..."complete" amd "error" to check for a success or error when updating entries/ quering the entries
     getData.onsuccess = () => {
-        console.log(`success in getting entry from store of the database!!!`, getData.result);
-        resolve(getData.result)
+        resolve(getData.result);
     }
     getData.onerror = () => {
         console.log(`Error in getting entry from store of the database!!!`);
-        reject(getData.error)
+        reject(getData.error);
     }
     })
     

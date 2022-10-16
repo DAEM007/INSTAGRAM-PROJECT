@@ -12,6 +12,12 @@ body {
     text-transform: capitalize;
 }
 
+/* ROOT DIV STYLES */
+#root {
+    margin: 0;
+    padding: 0;
+}
+
 /* NAV STYLES */
 
 

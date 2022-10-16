@@ -36,15 +36,11 @@ nav {
 
 .nav-links {
     margin-left: 3.0em;
+    cursor: pointer;
 }
 
 .nav-links a {
     margin-left: 1.1em;
-}
-
-.nav-links label {
-    margin-left: 1.1em;
-    cursor: pointer;
 }
 
 .nav-links i {
@@ -64,7 +60,7 @@ nav {
 }
 
 /* MOBILE RESPONSIVE */
-@media screen and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
     /* Responsive Nav */
     nav {
         padding: 0.5em 5em;
@@ -82,7 +78,7 @@ nav {
     .nav-links {
         position: fixed;
         bottom: 0;
-        left: 20%;
+        left: 0.5px;
         height: 5em;
         width: 100%;
         margin-top: 10em;
@@ -90,11 +86,7 @@ nav {
     }
 
     .nav-links a {
-        margin-left: 4em;
-    }
-
-    .nav-links label {
-        margin-left: 4em;
+        margin-left: 3.5em;
     }
 
     .fa-solid,

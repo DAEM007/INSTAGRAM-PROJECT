@@ -90,7 +90,7 @@
 }
 
 /* MOBILE RESPONSIVE */
-@media screen and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
     /* Responsive Bio */
     .container .bio {
         height: 22em;

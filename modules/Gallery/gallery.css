@@ -39,7 +39,7 @@
 
 /* RESPONSIVE GALLERY STYLES */
 
-@media screen and (max-width: 480px) {
+@media (min-width: 375px) and (max-width: 480px) {
     /* Responsive Gallery */
     .container .gallery {
         margin-bottom: 5em;

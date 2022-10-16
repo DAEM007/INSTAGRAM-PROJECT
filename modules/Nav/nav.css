@@ -35,18 +35,22 @@ nav {
 }
 
 .nav-links {
-    margin-left: 3.0em;
+    margin-left: 5em;
     cursor: pointer;
 }
 
 .nav-links a {
-    margin-left: 1.1em;
+    margin-left: 2em;
 }
 
 .nav-links i {
     /* background-color: #ffffff; This is not needed...background-color already inherited from body*/ 
     color: #262626;
     vertical-align: middle;
+}
+
+.nav-links label {
+    margin-left: 2em;
 }
 
 
@@ -82,11 +86,16 @@ nav {
         height: 5em;
         width: 100%;
         margin-top: 10em;
+        margin-left: 4em;
         padding: 0.5em;
     }
 
     .nav-links a {
-        margin-left: 3.5em;
+        margin-left: 3em;
+    }
+
+    .nav-links label {
+        margin-left: 3em;
     }
 
     .fa-solid,

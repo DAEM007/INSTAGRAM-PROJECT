@@ -13,7 +13,7 @@ const Bio = async () => {
             </div>
             <div class="profile-info">
                 <p class="name">${userInfo[0] ? userInfo[0].bioName : ''}</p>
-                <p class="decription">${userInfo[0] ? userInfo[0].bioDescription : ''}</p>
+                <p class="description">${userInfo[0] ? userInfo[0].bioDescription : ''}</p>
                 <button id="editBioButton">edit bio</button>
             </div>
             ${editBioForm()}

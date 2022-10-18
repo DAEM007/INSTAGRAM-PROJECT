@@ -60,7 +60,7 @@ nav {
 @media (min-width: 300px) and (max-width: 480px) {
     /* Responsive Nav */
     nav {
-        padding: 0.5em 0.5em;
+        padding: 0.5em 1.5em;
     }
 
     .logo > img {
@@ -81,6 +81,7 @@ nav {
         position: fixed;
         bottom: 0;
         left: 0.5px;
+        background-color: #fff;
         height: 5em;
         width: 100%;
         margin-left: 0.7em;

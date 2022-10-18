@@ -9,7 +9,8 @@
     grid-template-areas: 
                 "profile-photo profile-info"
     ;
-    padding: 3em 0 0 5em;
+    /* padding: 3em 0 0 5em; */
+    padding: 10px 30% 0 30%;
     width: 100%;
     height: 13em;
     border-bottom: 0.5px solid #dbdbdb;
@@ -34,6 +35,10 @@
     color: #262626;
 }
 
+.container .bio .profile-info .description {
+    font-size: 1em;
+}
+
 .container .bio .profile-info button {
     background-color: #0095f6;
     color: #ffffff;
@@ -46,9 +51,9 @@
     cursor: pointer;
 }
 
-
 .container .edit-bio-form {
     display: none;
+    /* display: block; */
     position: absolute;
     right: 32em;
     top: 4.5em;
@@ -103,24 +108,14 @@
     cursor: pointer;
 }
 
-
-
 /* RESPONSIVE BIO STYLES */
-
-/* TABLET RESPONSIVE */
-@media (min-width: 484px) and (max-width: 768px) {
-    .container .bio {
-        height: 7em;
-    }
-}
 
 /* MOBILE RESPONSIVE */
 @media (min-width: 300px) and (max-width: 480px) {
     /* Responsive Bio */
     .container .bio {
-        width: 100%;
-        height: 100%;
-        padding: 0;
+        gap: 2em;
+        height: 11em;
     }
 
     .container .bio .profile-photo {
@@ -128,11 +123,42 @@
         height: 5em;
     }
 
-    .profile-photo {
-        padding: 5em 0 0 5em;
+    .container .bio .profile-photo img {
+        padding: 10px 0 0 0;
     }
 
-    .profile-info {
-        margin-left: 10rem;
+    .container .bio .profile-info .name {
+        font-size: 1em;
+    }
+
+    .container .bio .profile-info .description {
+        font-size: 0.7em;
+    }
+
+    .container .bio .profile-info button {
+        margin-left: 10px;
+    }
+
+    .container #editBioButton {
+        margin-left: 0;
+    }
+
+    .container .edit-bio-form {
+        top: 6em;
+        right: 5em;
+        width: 10em;
+        height: 6em;
+    }
+
+    .edit-bio-form #bioName,
+    .edit-bio-form #bioDescription {
+        width: 9em;
+        height: 1.5em;
+    }
+
+    .edit-bio-form #submit {
+        margin-left: 0.3em;
     }
 }
+
+

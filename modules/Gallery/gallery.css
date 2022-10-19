@@ -10,8 +10,13 @@
     padding: 0 30%;
 }
 
+.container .gallery-loader {
+    margin-left: 80%;
+}
+
 .container .gallery{
-    display: grid;
+    /* We would add the grid in the events.js gallery just before rendering the images to the DOM */
+    /* display: grid; */
     padding: 0 15%;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1.7em;
@@ -45,6 +50,10 @@
     /* Responsive Gallery */
     .container .gallery-nav {
         height: 1em;
+    }
+
+    .container .gallery-loader {
+        margin-left: 55%;
     }
 
     .container .gallery {

@@ -25,7 +25,7 @@ const addBioEventListeners = () => {
         // Clear all entries from bio thread before adding another entry to the database
         clearAllEntries('bio');
 
-        // Add entry function for the database
+        // Add entry to the database for the Bio
         addEntryToDb('bio', {bioName, bioDescription});
 
         // Rendering for the bio name and description 

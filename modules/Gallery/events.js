@@ -36,13 +36,18 @@ const addImagesToGallery = async () => {
     // References to the items from the gallery store to be rendered to the DOM 
     const galleryItems = galleryData.map(singlePhoto => {
         return `
-        <a href="#" class="item">
-            <img src= "${singlePhoto ? singlePhoto : ''}" alt="">
-        </a>
+            <a href="#" class="item">
+                <img src= "${singlePhoto ? singlePhoto : ''}" alt="">
+            </a>
         `
     })
+    
+    // Add back the gallery styles
+    gallerySection.style.display = 'grid';
 
+    // Render the gallery back to the DOM
     gallerySection.innerHTML = galleryItems.join('');
+
 }
 
 
